@@ -1,0 +1,540 @@
+/* Beispiel für Responsive Design */
+@media only screen and (max-width: 600px) {
+    .main-content {
+        padding: 10px;
+    }
+}
+
+body {
+    background-color: #333; /* Dunkelgrauer Hintergrund */
+    color: #fff; /* Weiße Textfarbe */
+    font-family: 'Helvetica', sans-serif; /* Beispiel für Schriftart, ersetze nach Bedarf */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222; /* Dunkelgrauer Hintergrund für Header */
+    padding: 10px;
+}
+
+.header-image {
+    max-width: 70px; /* Passe die Breite nach Bedarf an */
+    height: auto;
+    border-radius: 50%; /* Macht das Bild kreisförmig */
+    position: absolute;
+    top: 50%; /* Platziere das Bild vertikal in der Mitte des Headers */
+    right: 20px; /* Platziere das Bild 20px von der rechten Seite */
+    transform: translateY(-50%); /* Zentriere das Bild vertikal */
+}
+
+/* Gemeinsame Stile für das Navigationsmenü */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* Hinzugefügter Stil für die Positionierung des Bildes */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Zentriere die Texte vertikal */
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold; /* Fetter Text für Links */
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Weicher Übergang bei Hover */
+    line-height: 1.5; /* Ändere diesen Wert, um die vertikale Zentrierung anzupassen */
+}
+
+/* Hervorhebung des aktuellen Links */
+nav a.current {
+    background-color: #faa2b1; /* Hintergrundfarbe für den aktuellen Link */
+    color: #222; /* Textfarbe für den aktuellen Link */
+}
+
+nav a:hover {
+    background-color: #555; /* Hintergrundfarbe bei Hover */
+}
+
+/* Dropdown-Stil für untergeordnete Menüpunkte */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333; /* Hintergrundfarbe des Dropdowns */
+    border-radius: 0 0 5px 5px;
+}
+
+nav ul li:hover > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul ul li {
+    margin-right: 0;
+    width: 100%;
+}
+
+/* Beispiel für animierte Unterstreichung bei Hover */
+nav a.underline:hover {
+    position: relative;
+}
+
+nav a.underline:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a.underline:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a.underline:hover::before,
+nav a.underline:hover::after {
+    transform: scaleX(1);
+}
+
+footer {
+    background-color: #222; /* Dunkelgrauer Hintergrund für Footer */
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#logo img {
+    width: 300px; /* Beispiel für die Breite des Logos in Pixeln */
+    height: auto; /* Automatische Anpassung der Höhe entsprechend der Breite */
+}
+
+
+.main-content {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #252525;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.home-content {
+    position: relative;
+    margin: 10px auto; /* Erhöhe den Margin-Wert für mehr Platz um den Bereich */
+    padding: 200px; /* Erhöhe den Padding-Wert für mehr Platz innerhalb des Bereichs */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.home-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/otherPictures/biglogo.jpeg") center/cover no-repeat;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.text-container {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 30px; /* Erhöhe den Font-Size-Wert für größeren Text */
+}
+
+.text-container h1,
+.text-container p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.team-description {
+    margin-bottom: 20px;
+}
+
+.team-members ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.team-members li {
+    color: #222222;
+    background-color: #f2f2f2;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.achievements {
+    color: #222222;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.achievements img {
+    width: 460px;
+    height: auto;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.join-us-section {
+    background-color: #333; /* Hintergrundfarbe der Section */
+    color: #fff; /* Textfarbe */
+    text-align: center;
+    padding: 50px 20px; /* Anpassbarer Innenabstand */
+}
+
+.join-us-section .content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join-us-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.join-us-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.join-us-section a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f65266; /* Hintergrundfarbe des Buttons */
+    color: #333; /* Textfarbe des Buttons */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Weicher Übergang bei Hover */
+}
+
+.join-us-section a:hover {
+    background-color: #fff; /* Hintergrundfarbe des Buttons bei Hover */
+    color: #333; /* Textfarbe des Buttons bei Hover */
+}
+
+
+a {
+    color: #f65266;
+}
+
+#seetrough-link {
+    color: #222222;
+}
+
+.contact-section {
+    background-color: #333; /* Hintergrundfarbe der Section */
+    color: #fff; /* Textfarbe */
+    text-align: center;
+    padding: 50px 20px; /* Anpassbarer Innenabstand */
+}
+
+.contact-section .contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+}
+
+.info-item {
+    margin: 0 20px;
+}
+
+.info-item p {
+    font-size: 16px;
+}
+
+.info-item a:hover {
+    color: #fff; /* Farbe für Links bei Hover */
+}
+
+/* ... (vorheriger CSS-Code bleibt unverändert) */
+
+.info-item i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #faa2b1; /* Farbe für alle Icons */
+}
+
+.info-item i.fab {
+    color: #bc2a8d; /* Farbe nur für das Instagram-Icon */
+}
+
+.info-item a {
+    color: #f65266; /* Farbe für Links */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Weicher Übergang bei Hover */
+}
+
+.join-us-form-section {
+    background-color: #222; /* Dunklerer Hintergrund für die Section */
+    color: #fff; /* Textfarbe */
+    text-align: center;
+    padding: 50px 20px; /* Anpassbarer Innenabstand */
+}
+
+.join-us-form-section .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join-us-form-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.join-us-form-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    background-color: #f65266; /* Hintergrundfarbe für den Absende-Button */
+    color: #333; /* Textfarbe für den Absende-Button */
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Weicher Übergang bei Hover */
+}
+
+button:hover {
+    background-color: #fff; /* Hintergrundfarbe für den Absende-Button bei Hover */
+    color: #333; /* Textfarbe für den Absende-Button bei Hover */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, #222, #faa2b1, #222); /* Verlaufsfarben für eine interessante Linie */
+    margin: 20px 0;
+}
+
+
+.main-content {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #252525;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.livery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.livery {
+    width: 30%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.livery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.livery h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.livery p {
+    font-size: 14px;
+}
+
+/* liveries.css */
+
+/* ... (vorheriger CSS-Code bleibt unverändert) */
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background-color: #f65266;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.category-btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.livery {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.livery img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+}
+
+.livery-details {
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.livery h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.livery p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.download-btn {
+    background-color: #f65266;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.rating-container {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.rating-title {
+    color: #aaaaaa;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.rating-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f65266;
+}
+
+.rating-description {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Beispiel für Responsive Design */
+@media only screen and (max-width: 600px) {
+    .rating-container {
+        padding: 10px;
+    }
+}
+

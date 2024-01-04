@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Babbo Performance">
+    <meta property="og:description" content="Official Web-Page of Babbo Performance">
+    <meta property="og:image" content="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Kontakt</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="../script/formValidationAndSend.js"></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li id="logo"><img src="../img/otherPictures/logo.png" alt="Logo"></li>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="about.html">About us</a></li>
+            <li class="nav-item"><a href="liveries.html">Liveries</a></li>
+            <li class="nav-item"><a href="contact.html" class="current">Contact</a></li>
+        </ul>
+        <a href="https://linktr.ee/babbo_performance_official" target="_blank"><img src="../img/otherPictures/instalogo.png" alt="Header Image" class="header-image" ></a>
+    </nav>
+</header>
+
+<section class="contact-section">
+    <div class="contact-content">
+        <h1>Kontakt</h1>
+        <p>Hier findest du unsere Kontaktdaten. Wir freuen uns von dir zu hören!</p>
+
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <p>Email: <a href="mailto:leo.lobmaier@htl-wels.at"><br>leo.lobmaier@htl-wels.at</a></p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <p>Telefon: <br>+43 681 2087 4499</p>
+            </div>
+            <div class="info-item">
+                <i class="fab fa-instagram"></i>
+                <p>Instagram: <a href="https://www.instagram.com/babbo_performance_official/" target="_blank">@babbo_performance_official</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="join-us-form-section">
+    <div class="form-container">
+        <h2>Join Us</h2>
+        <p>We would be delighted to welcome you to our team. Fill out the form to join us!</p>
+
+        <form id="contact-form">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="user_name" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="user_lastname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="user_email" required>
+
+            <label for="phone">Phone Number (optional):</label>
+            <input type="tel" id="phone" name="user_phone">
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="user_country" required>
+
+            <label for="irating">iRating (optional):</label>
+            <input type="number" id="irating" name="user_irating">
+
+            <label for="elo">Low Fuel Motorsport Elo (optional):</label>
+            <input type="number" id="elo" name="user_elo">
+
+            <label for="comment">Comment (optional):</label>
+            <textarea id="comment" name="message" rows="4" placeholder="Tell us something about you"></textarea>
+
+            <button type="submit" onclick="onSubmit(event)">Submit</button>
+        </form>
+    </div>
+    <br><br><br>
+</section>
+
+<footer>
+    <hr>
+    <p>&copy; 2024 Babbo Performance</p>
+</footer>
+
+</body>
+</html>
